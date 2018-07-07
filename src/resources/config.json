@@ -1,0 +1,34 @@
+/*注释只能使用这个格式。读取文件时，有去注释的代码，然后才能做反序列化*/
+{
+  /*链的某节点地址*/
+  "chainUrl": "http://127.0.0.1:8545/",
+  /*代理地址。设置为空串表示不启用代理（设置代理主要是用于抓包）*/
+  "proxyUrl": "http://127.0.0.1:8888",
+  /*HelloWorld合约地址*/
+  "addressHelloWorld": "0xa92b6e07ec1684c7b9579d4fe6a04b7cc4142e5b",
+  /*FactoringPrepareData合约地址*/
+  "addressFPData": "0xc5ad3dd8de7df6bc97489b197b41d7a0eade4631",
+  /*demo账户*/
+  "accounts": [
+    {
+      "name": "Corp A",
+      "privateKey": "29a609f08485f5c2777d5db007b20b658aec68b552733d69932552e409510ab8",
+      "publicKey": "0x3674f1492581a14cddba345d381d601fb52cb0290836cd97bd923dceafc642ca814b832d72f4ae51653354512404b8ccf7346ecd68d4996c895f4ed8a3cf7432"
+    },
+    {
+      "name": "Corp B",
+      "privateKey": "7787142a242f998be4a4aa684ca1bf4ada1a1d38d7868438c5efe3ba4ac796dc",
+      "publicKey": "0xe9fcdd1d74b41b4913b3456077a42243d1a6d06e28b234b8780deb739bf46f9e5a79468f839367424e6ef2e4031e729db9da0e63f72fa2cfcc26d659284a5184"
+    },
+    {
+      "name": "Corp C",
+      "privateKey": "d38d7924a1e3ebb0bf6495459f53a692b1adf2638214e21b175bc82f813a0194",
+      "publicKey": "0x8223e08f75cb25d50e498a77283858197a36343f142c1099b6c54f45fa2cad9f3e37e2cd3e4c0459290b090e7c97728ed9623cf24c4d588ae909da70a0d7a594"
+    },
+    {
+      "name": "Corp D",
+      "privateKey": "722ed9f6967e322ab35f19c05ab4a626cdf33289cc3cc12057903ab3bdf812f3",
+      "publicKey": "0xdf0435a29dbb39b71f014aa0318ee8cab79725281a68ef6ab495d009984fbe9d9e58bfd77397564b6155dfab0ba30945cef8a8c7b4a7608a3b3b42a4aa9fe2da"
+    }
+  ]
+}
