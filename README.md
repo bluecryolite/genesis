@@ -79,7 +79,11 @@ FISCO-BCOS地址：https://github.com/FISCO-BCOS/FISCO-BCOS
    Solidity中，有触发异常的代码，如`require`、`assert`，但是还不被web3j支持。<br/>
    目前的解决方法是，出现异常的时候触发事件，在事件中增加code和errorMessage的返回。
 
-3. 代码介绍
+3. 开发环境
+  - JAVA 1.8
+  - 把`dependence`目录下的jar加入到项目中
+
+4. 代码介绍
   - `BCOSContract`，继承自`Contract`。根据Node JS版的SDK重写了发送交易的方法，因为`Contract.executeTransaction`方法提交的交易，始终无法执行合约。同时封装了提交交易和事件触发，使一个完整的交易流程看起来是个同步的流程。修复了`Contract.executeCallSingleValueReturn`的一个bug，在未获取到返回值时，抛出的异常由数组越界改成了未获取到数据。
   - `BCOSAccount`，封装了账户，包括密钥对，以及调用的合约方法。
   - `HelloWorldContract`，封装了你好世界合约的调用。
@@ -89,6 +93,7 @@ FISCO-BCOS地址：https://github.com/FISCO-BCOS/FISCO-BCOS
 ## 未决事项
   - 合约方法中，参数变量过多，或者合约定义的struct参数过多，会导致编译失败，所以Demo中会切分成getContractContent和getContractSignature两个方法
   - 合约方法直接返回值，SDK无法捕获到，目前采用事件的方式来返回值
+  - 区块大小为2.1M，实测只能对20K（准确的阈值待定）以内的文本数据做验签
 
-## 致谢：
+## 致谢
 在学习过程中，得到了库神的`郑凯鸿`先生和币成的`曹银敏`先生在区块链的基础知识方面的帮助，以及`............`在JAVA开发方面的帮助
